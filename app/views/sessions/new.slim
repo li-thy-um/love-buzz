@@ -1,0 +1,6 @@
+= form_for :session, url: sessions_path do |f|
+  = f.label :你的大名, '是猴子搬来的救兵吗？'
+  br
+  = f.text_field :username
+  br
+  = f.submit '装逼开始了'

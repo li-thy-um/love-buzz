@@ -1,0 +1,15 @@
+= "你管自己叫 #{cookies.signed[:username]}"
+
+br
+br
+
+#messages
+
+br
+br
+
+  = form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f|
+    .form-group
+      = f.label :body, '我跟你们说啊：', class: 'control-label'
+      = f.text_area :body, class: 'form-control'
+    = f.submit '哔油~', class: 'form-control'
